@@ -1,5 +1,6 @@
 package pl.carshop.app;
 
+import pl.carshop.io.DataReader;
 import pl.carshop.model.Car;
 
 public class Shop {
@@ -7,9 +8,12 @@ public class Shop {
         final String appName = "Car dealer v0.7";
 
         Car [] car = new Car[100];
+        DataReader dataReader = new DataReader();
 
-        car[0] = new Car("Mazda","626",2004,1600,5,"yellow");
-        car[1] = new Car("Kia","Rio",2016,1300,5,"gray");
+        car[0] = dataReader.readAndCreateCar();
+        car[1] = dataReader.readAndCreateCar();
+
+        dataReader.close();
 
 
         System.out.println(appName);
