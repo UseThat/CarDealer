@@ -5,9 +5,9 @@ import pl.carshop.model.Car;
 import pl.carshop.model.Shop;
 
 public class ShopLoop {
-    private final int exitProgram = 0;
-    private final int addCar = 1;
-    private final int printCar = 2;
+    private final static int EXIT_PROGRAM = 0;
+    private final static int ADD_CAR = 1;
+    private final static int PRINT_CAR = 2;
     // turn on data reader class;
     private DataReader dataReader = new DataReader();
     //create main object
@@ -20,13 +20,13 @@ public class ShopLoop {
             printOptions();
             number = dataReader.getInt();
             switch (number){
-                case exitProgram:
+                case EXIT_PROGRAM:
                     exit();
                     break;
-                case addCar:
+                case ADD_CAR:
                     addCar();
                     break;
-                case printCar:
+                case PRINT_CAR:
                     printShop();
                     break;
                 default:
@@ -35,14 +35,14 @@ public class ShopLoop {
 
 
 
-        }while (number != exitProgram );
+        }while (number != EXIT_PROGRAM );
     }
 
     private void printOptions(){
         System.out.println("Choos option: ");
-        System.out.println(exitProgram + " - exit program");
-        System.out.println(addCar + " - add car");
-        System.out.println(printCar + " - print cars");
+        System.out.println(EXIT_PROGRAM + " - exit program");
+        System.out.println(ADD_CAR + " - add car");
+        System.out.println(PRINT_CAR + " - print cars");
     }
 
     private void addCar(){

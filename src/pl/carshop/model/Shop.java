@@ -3,12 +3,12 @@ package pl.carshop.model;
 import pl.carshop.io.DataReader;
 
 public class Shop {
-    private final int maxCar = 100;
-    private Car[] cars = new Car[maxCar];
+    private final static int MAX_CAR = 100;
+    private Car[] cars = new Car[MAX_CAR];
     private int carCounter;
 
     public void addCar(Car car) {
-        if (carCounter < maxCar) {
+        if (carCounter < MAX_CAR) {
             cars[carCounter] = car;
             carCounter++;
         }else{
