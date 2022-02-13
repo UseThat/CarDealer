@@ -12,6 +12,12 @@ public class DataReader {
         sc.close();
     }
 
+    public int getInt(){
+        int number = sc.nextInt();
+        sc.nextLine();
+        return number;
+    }
+
     public Car readAndCreateCar(){
         System.out.println("Brand: ");
         String brand = sc.nextLine();
@@ -20,11 +26,9 @@ public class DataReader {
         System.out.println("Production Year:");
         int productionYear = sc.nextInt();
         System.out.println("Engine:");
-        int engine = sc.nextInt();
-        sc.nextLine();
+        int engine = getInt();
         System.out.println("Doors count:");
-        int doorsCount = sc.nextInt();
-        sc.nextLine();
+        int doorsCount = getInt();
         System.out.println("Color:");
         String color = sc.nextLine();
 
