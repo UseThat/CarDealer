@@ -20,8 +20,8 @@ public class Shop {
         if(carCounter == 0){
             System.out.println("No car on parking!");
         }else{
-            for (Car car : cars) {
-                System.out.println(car);
+            for (int i = 0; i<carCounter;i++) {
+                System.out.println(cars[i]);
             }
         }
     }
